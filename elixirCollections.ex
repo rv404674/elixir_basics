@@ -20,7 +20,7 @@ defmodule M do
     # Loop over list
     words = ["Random", "sachin", "Sumedha", "sagar"]
     Enum.each words, fn endword ->
-    IO.puts(endword)
+      IO.puts(endword)
     end
 
     IO.puts("#{List.delete(words, "Random")}")
@@ -41,9 +41,34 @@ defmodule M do
     IO.puts("#{capital2.arizona}")
 
     capital3 = Dict.put_new(capital, "Rahul", "Verma")
-    #IO.inspect capital3
-
+    # IO.inspect capital3
   end
+
+  def pattern_matching do
+    [length, width] = [20, 30]
+    IO.puts("Width: #{width}")
+
+    [_, [_, a]] = [20, [30, 40]]
+    IO.puts("a: #{a}")
+
+    do_it()
+    factorial(100000)
+  end
+
+  def do_it(x \\ 1, y \\ 1) do
+    x + y
+  end
+
+  def factorial(n) do
+    if n <= 1 do
+      1
+    else
+      result = factorial(n-1) * n
+      result
+    end
+  end
+
+
 
 
 
