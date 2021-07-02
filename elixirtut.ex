@@ -38,5 +38,22 @@ defmodule M do
     IO.puts("5 div 4: #{div(5,4)}")
     IO.puts("5 % 4: #{rem(5,4)}")
   end
-  
+
+  def equality_comparator do
+    # NOTE: this is really interesting ==, is diff that ===
+    IO.puts("4 == 4.0: #{4 == 4.0}") # True
+    IO.puts("4 === 4.0: #{4 === 4.0}") # Falsee
+    IO.puts("4 != 4.0: #{4 != 4.0}") # false
+    IO.puts("4 !== 4.0: #{4 !== 4.0}") # true
+  end
+
+  def logical_operators do
+    age = 16
+    IO.puts("Vote and Drive: #{age >= 16 and age >= 18}")
+    IO.puts("Vote and Drive: #{age >=16 or age >=18}")
+    IO.puts not true
+  end
+
+
+
 end
