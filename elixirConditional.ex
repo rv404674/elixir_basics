@@ -17,11 +17,14 @@ defmodule M do
     end
 
     # NOTE: condition, first hit will be executed, be cautious with the order of execution
+    # fizzbuzz
+    # divisible by 3 - fizz, by 5- buzz, by 5 and 3 = fizzbuzz, else i
+    i = 16
     cond do
-      age >=18 -> IO.puts("You can vote")
-      age >=16 -> IO.puts("You can drive")
-      age >=14 -> IO.puts("You can wait")
-      true -> IO.puts("You cant do anything") # true is like a default
+      rem(i,5) === 0 and rem(i,3) === 0 -> IO.puts("fizzbuzz")
+      rem(i,3) -> IO.puts("fizz")
+      rem(i,5) -> IO.puts("buzz")
+      true -> IO.puts("#{i}") # true is like a default
     end
 
     # NOTE: case
